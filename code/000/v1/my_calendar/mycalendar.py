@@ -11,7 +11,8 @@ class CustomHTMLCalendar(calendar.LocaleHTMLCalendar):
     
     def __init__(self):
         super().__init__(firstweekday=calendar.SUNDAY, locale='es_AR')
-        
+
+
 try:    
     year = int(sys.argv[-1])
 except ValueError:

@@ -1,0 +1,25 @@
+.sun, .sat {
+    color: red;
+    text-align: center;
+}
+
+.mon, .tue, .wed, .thu, .fri {
+    color: blue;
+    text-align: center;
+}
+
+table, th, td {
+    border: 5px solid white;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th {
+    height: 20px;
+}
+
+th, td {
+  padding: 5px;
+}
