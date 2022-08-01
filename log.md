@@ -1,30 +1,18 @@
 # 100 Days Of Code - Log
 
-### Day 0: February 30, 2016 (Example 1)
-##### (delete me or comment me out)
+I am an electronic engineer who develops software by trade. 
+I wrote my first program in [GW-Basic](https://en.wikipedia.org/wiki/GW-BASIC), long time ago (during the past century!) During my long experience I have caught some bad habits I need to unlearn. I will try my 100 days of code for learning some good ones instead.
 
-**Today's Progress**: Fixed CSS, worked on canvas functionality for the app.
+Timezone: GMT-3
 
-**Thoughts:** I really struggled with CSS, but, overall, I feel like I am slowly getting better at it. Canvas is still new for me, but I managed to figure out some basic functionality.
+## (20220801): Monday 1 August, 2022
+One of my bad habits is developing code without tests. So, I want to learn Test Driven Development (TDD).
+I have noticed the wonderful Youtube channel by ArjanCodes, where these videos appear
 
-**Link to work:** [Calculator App](http://www.example.com)
+[How To Write Unit Tests For Existing Python Code // Part 1 of 2](https://www.youtube.com/watch?v=ULxMQ57engo)
 
-### Day 0: February 30, 2016 (Example 2)
-##### (delete me or comment me out)
+[How To Write Unit Tests For Existing Python Code // Part 2 of 2](https://www.youtube.com/watch?v=NI5IGAim8XU)
 
-**Today's Progress**: Fixed CSS, worked on canvas functionality for the app.
+[Test-Driven Development In Python // The power of red-green-refactor](https://www.youtube.com/watch?v=B1j6k2j2eJg)
 
-**Thoughts**: I really struggled with CSS, but, overall, I feel like I am slowly getting better at it. Canvas is still new for me, but I managed to figure out some basic functionality.
-
-**Link(s) to work**: [Calculator App](http://www.example.com)
-
-
-### Day 1: June 27, Monday
-
-**Today's Progress**: I've gone through many exercises on FreeCodeCamp.
-
-**Thoughts** I've recently started coding, and it's a great feeling when I finally solve an algorithm challenge after a lot of attempts and hours spent.
-
-**Link(s) to work**
-1. [Find the Longest Word in a String](https://www.freecodecamp.com/challenges/find-the-longest-word-in-a-string)
-2. [Title Case a Sentence](https://www.freecodecamp.com/challenges/title-case-a-sentence)
+10:00 AM - Today my work is: watch these videos, and write tests for some code.
