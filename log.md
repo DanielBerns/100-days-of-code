@@ -5,7 +5,7 @@ I wrote my first program in [GW-Basic](https://en.wikipedia.org/wiki/GW-BASIC), 
 
 Timezone: GMT-3
 
-## (20220801): Monday 1 August, 2022
+## Day 0 - (20220801): Monday 1 August, 2022
 One of my bad habits is developing code without tests. So, I want to learn Test Driven Development (TDD).
 I have noticed the wonderful Youtube channel by ArjanCodes, where these videos appear
 
