@@ -42,29 +42,19 @@ Note that ArjanCodes uses [pytest](https://docs.pytest.org/en/7.1.x/). Today, I 
 
 Now, I am going to follow [docs.python-guide.org/writing/structure/](https://docs.python-guide.org/writing/structure/).
 The first step is to add [````__init__.py````](./my_calendar/__init__.py) file in the directory [my_calendar](./my_calendar) because we need that to transform that bunch of scripts into a python package. Doing so, we can write the tests in separate directories [test_with_unittest](./tests_with_unittest) and [test_with_pyttest](./tests_with_pytest).
-
-
-Now, I write some code in [````./my_calender/__init__.py````](./my_calender/__init__.py)
-    
-    import .mycalendar
-    import .calapp
-    import .calfs
-    import .locale_example
-    import .formatyear
     
 Next, I go to the directory [tests_with_unittest/](./tests test_with_unittest). 
-Include an empty file named [````__init__.py````](./tests test_with_unittest/__init__.py) and the [very important file context.py, imho](./tests_with_unittest/context.py).
-
-Then, I go to the command line into the tests_with_unittest directory, execute python, and write the following
-
-    >>> from context import my_calendar
-    >>> dir(my_calendar)
+Include an empty file named [````__init__.py````](./tests test_with_unittest/__init__.py) and the [very important file context.py, imho](./tests_with_unittest/context.py)
     
-I get this
-
-    ['__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__path__', '__spec__']
+    from pathlib import Path
+    import sys
     
-Nothing to call, nothing to instantiate :-(, because these scripts in my_calendar directory are demos, not to be fully tested.
+    p = Path('./').absolute()
+    q = str(p.parent)
+    sys.path.insert(0, q)
+    
+    import my_calendar
 
+Now, I write some code in [````./my_calender/__init__.py````](./my_calender/__init__.py).
 
-***Please, go to [../v2/](../v2/).***
+***Post mortem note: I can't reproduce results consistently. I have tried different styles for importing modules. However, I believe the solution is refactoring the code. Please, go to [../v2/](../v2/).***
