@@ -24,4 +24,4 @@ Today I managed to refactor my code. Now, tests run, succeding and failing. Howe
 
 ## Day 2 - (29229803): Wednesday 3 August, 2022
 
-
+Today, I manage to get unittest and pytest test working. Tommorrow I will include some assertions.
