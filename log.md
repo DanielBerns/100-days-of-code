@@ -24,4 +24,8 @@ Today I managed to refactor my code. Now, tests run, succeding and failing. Howe
 
 ## Day 2 - (29229803): Wednesday 3 August, 2022
 
-Today, I manage to get unittest and pytest test working. Tommorrow I will include some assertions.
+Today, I manage to get unittest and pytest test working. Tomorrow I will include some assertions.
+
+## Day 3 - (29229803): Thursday August, 2022
+
+Today, I installed coverage and black in a local environment, and learn how to use them. Also, I read about [CI/CD](https://resources.github.com/ci-cd/) and take some notes. Tomorrow, I will try to make a github template repo, with Github Actions.
