@@ -43,4 +43,14 @@ years 2001 to 2020, generating spreadsheets as output.
 
 Day 006 of #100DaysOfCode. This is the [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet)
 
+## Day 7 - (29229809): Tuesday 9 August, 2022
 
+Day 006 of #100DaysOfCode. This is the [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet)
+
+## Day 8 - (29229810): Wednesday 10 August, 2022
+
+Day 009 of #100DaysOfCode. I continued working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet)
+
+I found a nice structure for python code (including tests), in this repo [Microblog](https://github.com/miguelgrinberg/microblog). Got working python imports!!!
+
+Also, I began to write some docs, and learn some git magic.
