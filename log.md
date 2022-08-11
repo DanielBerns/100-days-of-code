@@ -54,3 +54,10 @@ Day 008 of #100DaysOfCode. I continued working in [github repo for scraping data
 I found a nice structure for python code (including tests), in this repo [Microblog](https://github.com/miguelgrinberg/microblog). Got working python imports!!!
 
 Also, I began to write some docs, and learn some git magic.
+
+## Day 9 - (29229811): Thursday 11 August, 2022
+
+Day 009 of #100DaysOfCode. 
+
+1. I worked in my first [HuggingFace space](https://huggingface.co/spaces/DWB1962/svd_codes)
+2. Work in progress...
