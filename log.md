@@ -74,7 +74,11 @@ Day 011 of #100DaysOfCode. I worked in configuration with python-dotenv for my  
 
 Day 012 of #100DaysOfCode. Forgot to tweet. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet). Watched the [video by ArjanCodes](https://www.youtube.com/watch?v=iCE1bDoit9Q), and got an idea for scraping data from the CIA Factbook.
 
-## Day 13 - (292298116): Monday 15 August, 2022
+## Day 13 - (292298116): Tuesday 16 August, 2022
 
-Day 012 of #100DaysOfCode. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet). 
+Day 013 of #100DaysOfCode. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet). 
 Today I wrote a function to walk the directory tree with [os.walk](https://docs.python.org/3.8/library/os.html?highlight=os%20walk#os.walk), and detecting mimetypes with [mimetypes.guess_type](https://docs.python.org/3.8/library/mimetypes.html?highlight=mimetypes%20guess_type#mimetypes.guess_type)
+
+## Day 14 - (292298115): Wednesday 17 August, 2022
+
+Day 014 of #100DaysOfCode. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet). Today, I wrote quick and dirt code for getting mimetypes from all the files in factbook-{2000:2021} directories.
