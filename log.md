@@ -85,12 +85,12 @@ Day 014 of #100DaysOfCode. Working in [github repo for scraping data from CIA Fa
 
 ## Day 15 - (292298116): Thursday 18 August, 2022
 
-Day 015 of #100DaysOfCode. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet). Forgot to update this repo, forgot to tweet. Too much work, scanning files to detect patterns in the data.
+Day 015 of #100DaysOfCode. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet). Forgot to update this repo, forgot to tweet. Too much work, scanning files to detect patterns in the data. 
 
 ## Day 16 - (292298117): Friday 19 August, 2022
 
 Day 015 of #100DaysOfCode. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet). 
-Forgot to update this repo, forgot to tweet. Wrote some code, broke some tests. Refactoring the code. I found an interesting pattern: The factbooks have some html files under the fields/ subdirectory, with highly structured data. However, I will resist [the temptation](https://www.reddit.com/r/programming/comments/nlko23/summoning_cthulhu_by_parsing_html_with_regular/). I am writing some code for matching and collecting data from these files.
+Forgot to update this repo, forgot to tweet. Wrote some code, broke some tests. Refactoring the code. I found an interesting pattern: The factbooks have some html files under the fields/ subdirectory, with highly structured data. However, I will resist [the temptation](https://www.reddit.com/r/programming/comments/nlko23/summoning_cthulhu_by_parsing_html_with_regular/). I am writing some code for matching and collecting data from these files. [Original post about the evil attempts of processing html with regex](https://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags/1732454#1732454)
 
 ## Day 17 - (292298118): Saturday 20 August, 2022
 Day 015 of #100DaysOfCode. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet).
