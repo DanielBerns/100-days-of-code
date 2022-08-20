@@ -82,3 +82,16 @@ Today I wrote a function to walk the directory tree with [os.walk](https://docs.
 ## Day 14 - (292298115): Wednesday 17 August, 2022
 
 Day 014 of #100DaysOfCode. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet). Today, I wrote quick and dirt code for getting mimetypes from all the files in factbook-{2000:2021} directories.
+
+## Day 15 - (292298116): Thursday 18 August, 2022
+
+Day 015 of #100DaysOfCode. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet). Forgot to update this repo, forgot to tweet. Too much work, scanning files to detect patterns in the data.
+
+## Day 16 - (292298117): Friday 19 August, 2022
+
+Day 015 of #100DaysOfCode. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet). 
+Forgot to update this repo, forgot to tweet. Wrote some code, broke some tests. Refactoring the code. I found an interesting pattern: The factbooks have some html files under the fields/ subdirectory, with highly structured data. However, I will resist [the temptation](https://www.reddit.com/r/programming/comments/nlko23/summoning_cthulhu_by_parsing_html_with_regular/). I am writing some code for matching and collecting data from these files.
+
+## Day 17 - (292298118): Saturday 20 August, 2022
+Day 015 of #100DaysOfCode. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet).
+Updating this repo, tweeting about it.
