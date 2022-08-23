@@ -95,3 +95,15 @@ Forgot to update this repo, forgot to tweet. Wrote some code, broke some tests. 
 ## Day 17 - (292298118): Saturday 20 August, 2022
 Day 015 of #100DaysOfCode. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet).
 Updating this repo, tweeting about it.
+
+## Day 18 - (292298122): Monday 22 August, 2022
+Day 016 of #100DaysOfCode. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet).
+Forgot to tweet. I am working with two (or three) days long sprints. 
+
+## Day 19 - (292298123): Tuesday 23 August, 2022
+Day 016 of #100DaysOfCode. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet).
+Today, I get the data from factbook-2000. I think that with low effort, I can get the data from factbook-2001
+
+However, factbook-2002 to factbook-2017 are hard stuff. 
+
+factbook-2018 to factbook-2020 are the easiest ones, due to semantic html.
