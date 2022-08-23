@@ -101,8 +101,8 @@ Day 016 of #100DaysOfCode. Working in [github repo for scraping data from CIA Fa
 Forgot to tweet. I am working with two (or three) days long sprints. 
 
 ## Day 19 - (292298123): Tuesday 23 August, 2022
-Day 016 of #100DaysOfCode. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet).
-Today, I get the data from factbook-2000. I think that with low effort, I can get the data from factbook-2001
+Day 017 of #100DaysOfCode. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet).
+Today, I got the data from factbook-2000. I think that with low effort, I can get the data from factbook-2001
 
 However, factbook-2002 to factbook-2017 are hard stuff. 
 
