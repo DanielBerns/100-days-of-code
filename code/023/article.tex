@@ -1,0 +1,148 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\author{Daniel Walther Berns}
+\title{Transformers How To}
+\begin{document}
+	\maketitle
+
+    This article is divided into two parts; they are:
+\begin{enumerate}
+	\item Introduction to RNN
+	\begin{enumerate}
+		\item Unfolding in time
+		\item Backpropagation through time algorithm
+	\end{enumerate}
+	\item Different RNN architectures and variants
+\end{enumerate}
+	
+	\section{Introduction to RNN}
+	
+A recurrent neural network (RNN) is a special type of artificial neural network adapted to work for time series data or data that involves sequences. Ordinary feedforward neural networks are only meant for data points that are independent of each other. However, if we have data in a sequence such that one data point depends upon the previous data point, we need to modify the neural network to incorporate the dependencies between these data points. RNNs have the concept of “memory” that helps them store the states or information of previous inputs to generate the next output of the sequence.
+
+\subsection{Unfolding a Recurrent Neural Network}
+
+A simple RNN has a feedback loop, as shown in the first diagram of the above figure. The feedback loop shown in the gray rectangle can be unrolled in three time steps to produce the second network of the above figure. Of course, you can vary the architecture so that the network unrolls $k$ time steps. In the figure, the following notation is used:
+
+\begin{enumerate}
+\item $x_{t} \in \Re$ is the input at time step $t$. To keep things simple, we assume that $x_{t}$
+\item is a scalar value with a single feature. You can extend this idea to a $d$-dimensional feature vector.
+\item $y_{t} \in \Re$ is the output of the network at time step $t$ 
+. We can produce multiple outputs in the network, but for this example, we assume that there is one output.
+\item $h_{t} \in \Re^{m}$ vector stores the values of the hidden units/states at time $t$. This is also called the current context. $m$ is the number of hidden units. $h_{0}$ vector is initialized to zero.
+\item $w_{x}$ are weights associated with inputs in the recurrent layer.
+\item $w_{h}$ are weights associated with hidden units in the recurrent layer
+\item $w_{y}$ are weights associated with hidden units to output units
+\item $b_{h}$ is the bias associated with the recurrent layer
+\item $b_{y}$ is the bias associated with the feedforward layer	
+\end{enumerate}
+
+At every time step, we can unfold the network for $k$
+time steps to get the output at time step $k+1$. The unfolded network is very similar to the feedforward neural network. The rectangle in the unfolded network shows an operation taking place. So, for example, with an activation function $f$:
+\begin{equation}
+	h_{t+1} = f(x_{t}, h_{t}, w_{x}, w_{h}, b_{h}) = f(w_{x} \, x_{t} + w_{h} \, h_{t} + b_{h}).
+\end{equation}
+The output $y$ at time $t$ is computed as:
+\begin{equation}
+	y_{t} = f(h_{t}, w_{y}) = f(w_{y} \cdot h_{t} + b.)
+\end{equation}
+Hence, in the feedforward pass of an RNN, the network computes the values of the hidden units and the output after $k$
+time steps. The weights associated with the network are shared temporally. Each recurrent layer has two sets of weights: one for the input and the second for the hidden unit. The last feedforward layer, which computes the final output for the $k$th time step, is just like an ordinary layer of a traditional feedforward network.
+
+\subsection{The Activation Function}
+We can use any activation function we like in the recurrent neural network. Common choices are:
+\begin{enumerate}
+\item Sigmoid function: $a(x) = \frac{1}{1 + e^{-x}}$.
+
+\item Tanh function: $a(x) = \frac{e^{x} - e^{-x}}{e^{x} + e^{-x}}$.
+
+\item Relu function: $a(x) = max(0, x)$.
+\end{enumerate}
+
+\section{Training a Recurrent Neural Network}
+
+	The backpropagation algorithm of an artificial neural network is modified to include the unfolding in time to train the weights of the network. This algorithm is based on computing the gradient vector and is called backpropagation in time or BPTT algorithm for short. The pseudo-code for training is given below. The value of $k$ can be selected by the user for training. In the pseudo-code below, $p_{t}$ is the target value at time step $t$:
+	
+\begin{enumerate}
+	\item Repeat till the stopping criterion is met:
+	\begin{enumerate}
+		\item Set all $h$ to zero.
+		\item Repeat for $t = 0$ to $n-k$,
+		\item Forward propagate the network over the unfolded network for $k$ time steps to compute all $h$ and $y$. 
+		\item Compute the error as: $e = y_{t+k} - p_{t+k}$.
+		\item Backpropagate the error across the unfolded network and update the weights
+	\end{enumerate}
+
+\end{enumerate}	
+	
+\section{Types of RNN}
+
+The encoder-decoder architecture for recurrent neural networks is the standard neural machine translation method that rivals and in some cases outperforms classical statistical machine translation methods.
+
+The Encoder-Decoder architecture with recurrent neural networks has become an effective and standard approach for both neural machine translation (NMT) and sequence-to-sequence (seq2seq) prediction in general.
+
+The key benefits of the approach are the ability to train a single end-to-end model directly on source and target sentences and the ability to handle variable length input and output sequences of text.
+
+As evidence of the success of the method, the architecture is the core of the Google translation service:
+"Our model follows the common sequence-to-sequence learning framework with attention. It has three components: an encoder network, a decoder network, and an attention network."
+
+\section{Sutskever NMT Model}
+We will look at the neural machine translation model developed by Ilya Sutskever, et al. as described in their 2014 paper “Sequence to Sequence Learning with Neural Networks“. We will refer to it as the “Sutskever NMT Model“, for lack of a better name.
+
+This is an important paper as it was one of the first to introduce the Encoder-Decoder model for machine translation and more generally sequence-to-sequence learning.
+
+It is an important model in the field of machine translation as it was one of the first neural machine translation systems to outperform a baseline statistical machine learning model on a large translation task.
+
+The model was applied to English to French translation, specifically the WMT 2014 translation task.
+
+The translation task was processed one sentence at a time, and an end-of-sequence (\verb-<EOS>-) token was added to the end of output sequences during training to signify the end of the translated sequence. This allowed the model to be capable of predicting variable length output sequences.
+
+The model was trained on a subset of the 12 Million sentences in the dataset, comprised of 348 million French words and 304 million English words. This set was chosen because it was pre-tokenized.
+
+The source vocabulary was reduced to the $160000$ most frequent source English words and $80000$ of the most frequent target French words. All out-of-vocabulary words were replaced with the “UNK” token.
+
+\subsection{The model}
+An Encoder-Decoder architecture was developed where an input sequence was read in entirety and encoded to a fixed-length internal representation.
+
+A decoder network then used this internal representation to output words until the end of sequence token was reached. LSTM networks were used for both the encoder and decoder.
+
+The idea is to use one LSTM to read the input sequence, one timestep at a time, to obtain large fixed-dimensional vector representation, and then to use another LSTM to extract the output sequence from that vector
+
+The final model was an ensemble of 5 deep learning models. A left-to-right beam search was used during the inference of the translations.
+
+\subsection{Model Configuration}
+\begin{enumerate}
+\item Input sequences were reversed.
+\item A 1000-dimensional word embedding layer was used to represent the input words.
+\item Softmax was used on the output layer.
+\item The input and output models had 4 layers with 1,000 units per layer.
+\item The model was fit for 7.5 epochs where some learning rate decay was performed.
+\item A batch-size of 128 sequences was used during training.
+\item Gradient clipping was used during training to mitigate the chance of gradient explosions.
+\item Batches were comprised of sentences with roughly the same length to speed-up computation.
+\end{enumerate}
+
+\section{Cho NMT Model}
+	In this section, we will look at the neural machine translation system described by Kyunghyun Cho, et al. in their 2014 paper titled “Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation.” We will refer to it as the “Cho NMT Model” model for lack of a better name.
+	
+	Importantly, the Cho Model is used only to score candidate translations and is not used directly for translation like the Sutskever model above. Although extensions to the work to better diagnose and improve the model do use it directly and alone for translation.
+	
+\subsection{Problem}
+As above, the problem is the English to French translation task from the WMT 2014 workshop.
+
+The source and target vocabulary were limited to the most frequent 15,000 French and English words which covers $93$ percent of the dataset, and out of vocabulary words were replaced with “UNK”.
+
+\subsection{Model}
+
+The model uses the same two-model approach, here giving it the explicit name of the encoder-decoder architecture.
+
+"called RNN Encoder–Decoder that consists of two recurrent neural networks (RNN). One RNN encodes a sequence of symbols into a fixed-length vector representation, and the other decodes the representation into another sequence of symbols."
+
+\subsection{Model Configuration}
+A 100-dimensional word embedding was used to represent the input words.
+The encoder and decoder were configured with 1 layer of 1000 GRU units.
+500 Maxout units pooling 2 inputs were used after the decoder.
+A batch size of 64 sentences was used during training.
+
+\end{document} 

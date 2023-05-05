@@ -22,32 +22,32 @@ I have noticed the wonderful Youtube channel by ArjanCodes, where these videos a
 
 Today I managed to refactor my code. Now, tests run, succeding and failing. However, I need to include assertions and use coverage.
 
-## Day 2 - (29229803): Wednesday 3 August, 2022
+## Day 2 - (20220803): Wednesday 3 August, 2022
 
 Today, I manage to get unittest and pytest test working. Tomorrow I will include some assertions.
 
-## Day 3 - (29229804): Thursday 4 August, 2022
+## Day 3 - (20220804): Thursday 4 August, 2022
 
 Today, I installed coverage and black in a local environment, and learn how to use them. Also, I read about [CI/CD](https://resources.github.com/ci-cd/) and take some notes. Tomorrow, I will try to make a github template repo, with Github Actions.
 
-## Day 4 - (29229805): Friday 5 August, 2022
+## Day 4 - (20220805): Friday 5 August, 2022
 
 Day 004 of #100DaysOfCode Today I prepared a github template repo for my #MachineLearning projects. I will publish it Tuesday 9 August 2022.
 
-## Day 5 - (29229806): Saturday 6 August, 2022
+## Day 5 - (20220806): Saturday 6 August, 2022
 
 Day 005 of #100DaysOfCode. Today I restarted my first python project: scraping data from CIA Factbook (html +csv), 
 years 2001 to 2020, generating spreadsheets as output.
 
-## Day 6 - (29229808): Monday 8 August, 2022
+## Day 6 - (20220808): Monday 8 August, 2022
 
 Day 006 of #100DaysOfCode. This is the [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet)
 
-## Day 7 - (29229809): Tuesday 9 August, 2022
+## Day 7 - (20220809): Tuesday 9 August, 2022
 
 Day 007 of #100DaysOfCode. This is the [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet)
 
-## Day 8 - (29229810): Wednesday 10 August, 2022
+## Day 8 - (20220810): Wednesday 10 August, 2022
 
 Day 008 of #100DaysOfCode. I continued working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet)
 
@@ -55,55 +55,61 @@ I found a nice structure for python code (including tests), in this repo [Microb
 
 Also, I began to write some docs, and learn some git magic.
 
-## Day 9 - (29229811): Thursday 11 August, 2022
+## Day 9 - (20220811): Thursday 11 August, 2022
 
 Day 009 of #100DaysOfCode. 
 
 1. I worked in my first [HuggingFace space](https://huggingface.co/spaces/DWB1962/svd_codes)
 2. Work in progress...
 
-## Day 10 - (292298112): Friday 12 August, 2022
+## Day 10 - (20220812): Friday 12 August, 2022
 
 Day 010 of #100DaysOfCode. Forgot to tweet. I worked with tests for my old code, found some bugs.
 
-## Day 11 - (292298113): Saturday 13 August, 2022
+## Day 11 - (20220813): Saturday 13 August, 2022
 
 Day 011 of #100DaysOfCode. I worked in configuration with python-dotenv for my  data scraping code.
 
-## Day 12 - (292298115): Monday 15 August, 2022
+## Day 12 - (20220815): Monday 15 August, 2022
 
 Day 012 of #100DaysOfCode. Forgot to tweet. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet). Watched the [video by ArjanCodes](https://www.youtube.com/watch?v=iCE1bDoit9Q), and got an idea for scraping data from the CIA Factbook.
 
-## Day 13 - (292298116): Tuesday 16 August, 2022
+## Day 13 - (20220816): Tuesday 16 August, 2022
 
 Day 013 of #100DaysOfCode. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet). 
 Today I wrote a function to walk the directory tree with [os.walk](https://docs.python.org/3.8/library/os.html?highlight=os%20walk#os.walk), and detecting mimetypes with [mimetypes.guess_type](https://docs.python.org/3.8/library/mimetypes.html?highlight=mimetypes%20guess_type#mimetypes.guess_type)
 
-## Day 14 - (292298115): Wednesday 17 August, 2022
+## Day 14 - (20220815): Wednesday 17 August, 2022
 
 Day 014 of #100DaysOfCode. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet). Today, I wrote quick and dirt code for getting mimetypes from all the files in factbook-{2000:2021} directories.
 
-## Day 15 - (292298116): Thursday 18 August, 2022
+## Day 15 - (20220816): Thursday 18 August, 2022
 
 Day 015 of #100DaysOfCode. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet). Forgot to update this repo, forgot to tweet. Too much work, scanning files to detect patterns in the data. 
 
-## Day 16 - (292298117): Friday 19 August, 2022
+## Day 16 - (20220817): Friday 19 August, 2022
 
 Day 015 of #100DaysOfCode. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet). 
 Forgot to update this repo, forgot to tweet. Wrote some code, broke some tests. Refactoring the code. I found an interesting pattern: The factbooks have some html files under the fields/ subdirectory, with highly structured data. However, I will resist [the temptation](https://www.reddit.com/r/programming/comments/nlko23/summoning_cthulhu_by_parsing_html_with_regular/). I am writing some code for matching and collecting data from these files. [Original post about the evil attempts of processing html with regex](https://stackoverflow.com/questions/1732348/regex-match-open-tags-except-xhtml-self-contained-tags/1732454#1732454)
 
-## Day 17 - (292298118): Saturday 20 August, 2022
+## Day 17 - (20220818): Saturday 20 August, 2022
 Day 015 of #100DaysOfCode. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet).
 Updating this repo, tweeting about it.
 
-## Day 18 - (292298122): Monday 22 August, 2022
+## Day 18 - (20220812): Monday 22 August, 2022
 Day 016 of #100DaysOfCode. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet).
 Forgot to tweet. I am working with two (or three) days long sprints. 
 
-## Day 19 - (292298123): Tuesday 23 August, 2022
+## Day 19 - (20220823): Tuesday 23 August, 2022
 Day 017 of #100DaysOfCode. Working in [github repo for scraping data from CIA Factbook](https://github.com/DanielBerns/CIA_Factbook_to_spreadsheet).
 Today, I got the data from factbook-2000. I think that with low effort, I can get the data from factbook-2001
 
 However, factbook-2002 to factbook-2017 are hard stuff. 
 
 factbook-2018 to factbook-2020 are the easiest ones, due to semantic html.
+
+## Day 20 - (20220915): Saturday 17 September, 2022
+Day 018 of #100DaysOfCode. Working again after a long time off.
+
+## Day 21 - (20230414): Friday 14 April, 2023
+Day 019 of #100DaysOfCode.
