@@ -1,0 +1,54 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: article.aux
+The style file: plain.bst
+Database file #1: article.bib
+Warning--entry type for "merriam.webster:sentience" isn't style-file defined
+--line 1 of file article.bib
+"{" immediately follows a field part---line 2 of file article.bib
+ :  author = \
+ :            {\},
+I'm skipping whatever remains of this entry
+Warning--to sort, need author or key in merriam.webster:sentience
+You've used 1 entry,
+            2118 wiz_defined-function locations,
+            496 strings with 4005 characters,
+and the built_in function-call counts, 157 in all, are:
+= -- 8
+> -- 1
+< -- 0
++ -- 1
+- -- 0
+* -- 7
+:= -- 20
+add.period$ -- 1
+call.type$ -- 1
+change.case$ -- 2
+chr.to.int$ -- 0
+cite$ -- 2
+duplicate$ -- 7
+empty$ -- 24
+format.name$ -- 0
+if$ -- 34
+int.to.chr$ -- 0
+int.to.str$ -- 1
+missing$ -- 0
+newline$ -- 6
+num.names$ -- 0
+pop$ -- 8
+preamble$ -- 1
+purify$ -- 2
+quote$ -- 0
+skip$ -- 12
+stack$ -- 0
+substring$ -- 5
+swap$ -- 1
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 4
+warning$ -- 1
+while$ -- 0
+width$ -- 2
+write$ -- 6
+(There was 1 error message)

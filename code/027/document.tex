@@ -1,0 +1,26 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\newcommand\m[1]{\mathbf#1}
+\newcommand\abs[1]{\left\lvert#1\right\rvert}
+\author{Daniel Walther Berns}
+\title{Text embeddings so far}
+\begin{document}
+	\section{Introduction}
+	\begin{enumerate}
+	\item Suppose we have some sequence $T$, a combination with repetition of $M$ tokens taken from a set of $W = \{w_{k}, 0 \leq k < N\}$.
+    \item Now, we define the one hot encoding $\m{e}_{k} \in B^{N}$, 
+    where $\m{e}_{k}$ is the $k-$esim column of $\m{I}_{N}$, the identity matrix in $\Re^{N \times N}$. Thus, we assign the vector $\m{e}_{k}$ to each token $w_{k}$.
+    \item Then, we define a matrix $\m{D} \in B^{N \times M}$, where $T_{m} = w_{k}$, $0 \leq m < M$ implies
+    $\m{D}_{m} \doteq \m{e}_{k}$.
+    \end{enumerate}
+    
+    We want to evaluate
+    \begin{equation}
+    	\m{D} \cdot \left(\m{I}_{m} - \frac{\m{u} \cdot \m{u}^{t}}{m}\right) \cdot \m{x} = \lambda \, \m{y},
+    \end{equation}
+    \begin{equation}
+	\left(\m{I}_{m} - \frac{\m{u} \cdot \m{u}^{t}}{m}\right) \cdot \m{D}^{t} \cdot \m{y} = \lambda \, \m{x}.
+\end{equation}
+\end{document}
