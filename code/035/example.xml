@@ -1,0 +1,18 @@
+<root>
+    <person>
+        <name>Juan Jose Soto</name>
+        <age>30</age>
+        <city>Comodoro Rivadavia</city>
+    </person>
+    <person>
+        <name>Ana María Perez</name>
+        <age>25</age>
+        <city>Caleta Olivia</city>
+    </person>
+    <person>
+        <name>Rosa Paredes</name>
+        <age>35</age>
+        <city>Rawson</city>
+    </person>
+</root>
+ 

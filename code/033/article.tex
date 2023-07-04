@@ -1,0 +1,22 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\author{Daniel Walther Berns}
+\title{Neural Networks from scratch}
+\begin{document}
+	\section{Neural networks: functions}
+	
+	A neural network is a function
+	\begin{equation}
+		y = f(x, p),
+	\end{equation}
+    where the independent variable $x$ may be a vector, a matrix or a tensor and the parameters $p$ must be evaluated as a function of $x_{t}$, $y(t)$
+    \begin{equation}
+    	p = g(x_{t}, y_{t}),
+    \end{equation}
+    minimizing a loss function
+    \begin{equation}
+    	z = L(x_{t}, y_{t}, p)
+    \end{equation}
+\end{document}

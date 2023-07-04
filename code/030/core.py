@@ -34,7 +34,7 @@ class AllThesePlacesException(Exception):
     pass
     
 class AllThesePlaces:
-    def __init__(self, identifier: str) -> None:
+    def __init__(self) -> None:
         self._catalog = {}
 
     @property
@@ -48,3 +48,25 @@ class AllThesePlaces:
             self.catalog[place.coordinates] = place
         else:
             raise AllThesePlacesException(f"this place exists already {str(place.coordinates)}")
+        
+        
+class Agent:
+    def __init__(self, 
+                 identifier: str,
+                 this_place: Place
+                 ) -> None:
+        self._identifier: str = identifier
+        self._coordinates: Tuple[int, int, int] = this_place.coordinates
+    
+    @property
+    def identifier(self):
+        return self._identifier
+
+    @property
+    def coordinates(self):
+        return self._coordinates
+    
+    @coordinates.setter
+    def coordinates(self, value: Tuple[int, int, int]) -> None:
+        assert sum(value) == 0 
+        self._coordinates = value
