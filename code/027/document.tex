@@ -15,6 +15,16 @@
     \item Then, we define a matrix $\m{D} \in B^{N \times M}$, where $T_{m} = w_{k}$, $0 \leq m < M$ implies
     $\m{D}_{m} \doteq \m{e}_{k}$.
     \end{enumerate}
+
+Note that
+\begin{enumerate}
+	\item $\m{D} \cdot \m{D}^{t} = \m{F}$, where $\m{F} \in \Re^{N \times N}\}$ is a diagonal matrix such that 
+	$D_{i,k} \times D_{i,k} = 1$ or $D_{i,k} \times D_{i,k} = 0$,
+	$F_{i,i} = \sum_{k=1}^{M} D_{i,k} \times D_{k,i} = F_{i,i} \neq 0$, $0 < F_{i,i} < M$, 
+	$F_{i,j} = \sum_{k=1}^{M} D_{i,k} \times D_{k,j} = F_{i,j} = 0$.
+	\item $\m{D} \cdot \m{u} = \m{f}$, where $\m{f} \in \Re^{N}\}$ is a vector such that
+	$f_{i} = \sum_{k} D_{i,k} = F_{i,i} \neq 0$.  	
+\end{enumerate}
     
     We want to evaluate
     \begin{equation}
