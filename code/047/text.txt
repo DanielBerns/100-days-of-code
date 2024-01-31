@@ -1,0 +1,126 @@
+number of pages: 1
+periodo: Octubre 2023
+apellido_y_nombres: WHITTY VIRGINIA CRISTINA
+ley: Ley: 1820/00
+banco: B.CH.CA-COMODORO RIVADAVIA
+documento: D.N.I. 17622771
+jub: % Jub.: 82.00%
+beneficio: Beneficio: 25874
+recibo: Recibo: 984
+categoria: 020-GABINETISTA CON 20 HS. SEM
+code-0: 100Haber Mensual 30 
+value-0:  448.171,65
+code-1: 1101Retroactivo Haberes por Movilidad 
+value-1:  27.511,19
+code-2: 9900Esposa/o 
+value-2:  5.757,00
+code-3: 140Adelanto a cuenta de Zona Remunerativa 
+value-3:  1.800,00
+code-4: 500Aporte personal SER.O.S. 4.250 
+value-4:  20.216,52
+code-5: 503Prestamos SER.O.S. 011/011 C - 1553191 
+value-5:  509,04
+code-6: 503Prestamos SER.O.S. 014/015 C - 1506852 
+value-6:  525,09
+code-7: 533Seguro de Vida Obligatorio 
+value-7:  500,00
+code-8: 535Seguro colectivo familiar 
+value-8:  390,00
+code-9: 677Cobertura de Transplantes 1 
+value-9:  50,00
+haberes:  483.239,84 
+descuentos:  22.190,65 
+salario_familiar:  5.757,00
+neto:  461.049,19
+number of pages: 1
+periodo: Noviembre 2023
+apellido_y_nombres: WHITTY VIRGINIA CRISTINA
+ley: Ley: 1820/00
+banco: B.CH.CA-COMODORO RIVADAVIA
+documento: D.N.I. 17622771
+jub: % Jub.: 82.00%
+beneficio: Beneficio: 25874
+recibo: Recibo: 2431
+categoria: 020-GABINETISTA CON 20 HS. SEM
+code-0: 100Haber Mensual 30 
+value-0:  475.689,39
+code-1: 1101Retroactivo Haberes por Movilidad 
+value-1:  27.517,74
+code-2: 9900Esposa/o 
+value-2:  5.757,00
+code-3: 140Adelanto a cuenta de Zona Remunerativa 
+value-3:  1.800,00
+code-4: 500Aporte personal SER.O.S. 4.250 
+value-4:  21.386,30
+code-5: 503Prestamos SER.O.S. 015/015 C - 1506852 
+value-5:  525,09
+code-6: 533Seguro de Vida Obligatorio 
+value-6:  500,00
+code-7: 535Seguro colectivo familiar 
+value-7:  390,00
+code-8: 677Cobertura de Transplantes 1 
+value-8:  50,00
+haberes:  510.764,13 
+descuentos:  22.851,39 
+salario_familiar:  5.757,00
+neto:  487.912,74
+number of pages: 1
+periodo: Diciembre 2023
+apellido_y_nombres: WHITTY VIRGINIA CRISTINA
+ley: Ley: 1820/00
+banco: B.CH.CA-COMODORO RIVADAVIA
+documento: D.N.I. 17622771
+jub: % Jub.: 82.00%
+beneficio: Beneficio: 25874
+recibo: Recibo: 2179
+categoria: 020-GABINETISTA CON 20 HS. SEM
+code-0: 100Haber Mensual 30 
+value-0:  503,231.81
+code-1: 1101Retroactivo Haberes por Movilidad 
+value-1:  27,542.42
+code-2: 9900Esposa/o 
+value-2:  5,757.00
+code-3: 140Adelanto a cuenta de Zona Remunerativa 
+value-3:  1,800.00
+code-4: 500Aporte personal SER.O.S. 4.25 
+value-4:  22,557.90
+code-5: 533Seguro de Vida Obligatorio 
+value-5:  500.00
+code-6: 535Seguro colectivo familiar 
+value-6:  390.00
+code-7: 677Cobertura de Transplantes 1 
+value-7:  50.00
+haberes:  538,331.23 
+descuentos:  23,497.90 
+salario_familiar:  5,757.00
+neto:  514,833.33
+number of pages: 1
+periodo: Diciembre 2023
+apellido_y_nombres: INSUA DELIA
+ley: Ley: 1820/00
+banco: B.CH.CA-COMODORO RIVADAVIA
+documento: D.N.I. 04596790
+jub: % Jub.: 70.36%
+beneficio: Beneficio: 4922
+recibo: Recibo: 1505
+categoria: 101-SUPERVISOR ESCOLAR ESC/C
+code-0: 100Haber Mensual 30 
+value-0:  760,321.22
+code-1: 1101Retroactivo Haberes por Movilidad 
+value-1:  40,728.92
+code-2: 140Adelanto a cuenta de Zona Remunerativa 
+value-2:  1,800.00
+code-3: 500Aporte personal SER.O.S. 4.25 
+value-3:  34,044.63
+code-4: 503Prestamos SER.O.S. 004/009 C - 1684845 
+value-4:  971.06
+code-5: 533Seguro de Vida Obligatorio 
+value-5:  100.00
+code-6: 535Seguro colectivo familiar 
+value-6:  130.00
+code-7: 677Cobertura de Transplantes 1 
+value-7:  50.00
+haberes:  802,850.14 
+descuentos:  35,295.69 
+salario_familiar:  0.00
+neto:  767,554.45

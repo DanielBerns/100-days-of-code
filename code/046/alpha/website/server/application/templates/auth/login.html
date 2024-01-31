@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="w3-row-padding">
+    <div class="w3-cell w3-quarter"><br></div>
+    <div class="w3-cell w3-half w3-white">
+    <div class="w3-content w3-center"><h3>Sign In</h3></div>
+    <div class="w3-container"> 
+    <p>Usuario nuevo? <a href="{{ url_for('auth.register') }}">Regístrese!</a></p>
+    <p>¿Olvidó su contraseña? <a href="{{ url_for('auth.register') }}">Regístrese nuevamente!</a></p>
+    </div>
+    <div class="w3-container">     
+    <form class="w3-container" action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.username.label }}<br>
+            {{ form.username(size=32, class_="w3-input") }}<br>
+            {% for error in form.username.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.password.label }}<br>
+            {{ form.password(size=32, class_="w3-input") }}<br>
+            {% for error in form.password.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.remember_me(class_="w3-check") }} {{ form.remember_me.label }}</p>
+        <br>
+        <p>{{ form.submit(class_="w3-button") }}</p>
+    </form>
+    </div>
+    </div>
+    <div class="w3-cell-row w3-quarter"><br></div>
+    </div>
+{% endblock %}

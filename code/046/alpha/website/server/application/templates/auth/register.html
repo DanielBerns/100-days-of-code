@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="w3-row-padding">
+    <div class="w3-cell w3-col" style="width:15%"><br></div>
+    <div class="w3-cell w3-col w3-white" style="width:70%">
+    <div class="w3-content w3-center"><h3>Regístrese</h3></div>
+    <form class="w3-container" action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.username.label }}<br>
+            {{ form.username(size=32, class_="w3-input") }}<br>
+            {% for error in form.username.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.password.label }}<br>
+            {{ form.password(size=32, class_="w3-input") }}<br>
+            {% for error in form.password.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.repeat_password.label }}<br>
+            {{ form.repeat_password(size=32, class_="w3-input") }}<br>
+            {% for error in form.repeat_password.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.about_me.label }}<br>
+            {{ form.about_me(size=32, class_="w3-input") }}<br>
+            {% for error in form.about_me.errors %}
+            <span style="color: red;">[{{ error }}]</span>
+            {% endfor %}
+        </p>        
+        <p>{{ form.submit(class_="w3-button") }}</p>
+    </form>
+    </div>
+    </div>
+{% endblock %}
+

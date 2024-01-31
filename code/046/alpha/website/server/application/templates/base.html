@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% if title %}
+        <title>{{ title }}</title>
+        {% else %}
+        <title>Athena</title>
+        {% endif %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='w3.css') }}">
+</head>
+<body class="w3-light-gray">
+    {% block navigation %}{% endblock %}
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    <article class="w3-container">
+    <ul>
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    </article>
+    {% endif %}
+    {% endwith %}
+    {% block content %}{% endblock %}
+</body>
+</html>

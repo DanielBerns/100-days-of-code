@@ -1,0 +1,15 @@
+<div class="w3-container">
+<ul class="w3-ul w3-border">
+{% for post in messages %}
+    {% include '_one_post.html' %}
+{% endfor %}
+</ul>
+<div class="w3-panel">
+    {% if next_url %}
+    <a href="{{ next_url }}">Mensajes siguientes</a>
+    {% endif %}
+    {% if prev_url %}
+    <a href="{{ prev_url }}">Mensajes anteriores</a>
+    {% endif %}
+</div>
+</div>

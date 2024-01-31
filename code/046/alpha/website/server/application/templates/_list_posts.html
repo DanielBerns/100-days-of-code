@@ -1,0 +1,16 @@
+<div class="w3-container">
+<ul class="w3-ul w3-border">
+{% for post in posts %}
+    {% include '_one_post.html' %}
+{% endfor %}
+</ul>
+</div>
+<div class="w3-panel">
+    {% if next_url %}
+    <a href="{{ next_url }}">Publicaciones siguientes</a>
+    {% endif %}
+    {% if prev_url %}
+    <a href="{{ prev_url }}">Publicaciones previas</a>
+    {% endif %}
+</div>
+

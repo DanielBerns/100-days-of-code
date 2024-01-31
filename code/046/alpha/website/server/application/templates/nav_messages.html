@@ -1,0 +1,8 @@
+<a class="w3-bar-item w3-left" href="{{ url_for('main.messages') }}">Mensajes
+   {% set new_messages = current_user.new_messages() %}
+   <span id="message_count" 
+         class="badge"
+         style="visibility:{% if new_messages %}visible{% else %}hidden{% endif %};">
+       {{ new_messages }}
+   </span>
+</a>

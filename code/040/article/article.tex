@@ -1,0 +1,168 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\author{Daniel Walther Berns}
+\title{Neural networks applied to weather sciences}
+\begin{document}
+	\section{Introduction}
+	\subsection{What are neural networks?}
+
+% - Define neural networks and machine learning, and give some examples of their applications in different fields.
+Neural networks are functions implemented as software. This means that they are not physical objects, but rather a set of algorithms that are programmed into a computer. These algorithms are inspired by the way that neurons in the human brain work, but they are not a perfect imitation.
+
+As said, neural networks are functions 
+\begin{equation}
+	y = f(x, w),
+\end{equation}
+where $x$ is the input data, $y$ is the output and $w$ are parameters, called weights.
+
+Neural networks are trained iteratively using a set of examples $x_{t}, y_{t}$, adjusting the weights $w$ until the network can accurately predict the output for a given input. This process is called supervised learning.
+\begin{equation}
+	w_{k+1} = g(w_{k}, x_{t}, y_{t}), 
+\end{equation}
+where $w_{0}$ is a random value.
+
+\section{Example: ADALINE}
+
+ADALINE (Adaptive Linear Neuron or later Adaptive Linear Element) is a single layer neural network with multiple nodes where each node accepts multiple inputs and generates one output. Given the following variables as:
+
+\begin{itemize}
+\item x is the input vector
+\item w is the weight vector
+\item n is the number of inputs
+\item $\theta$ is a constant
+\item $y$ is the output of the model, defined as
+\begin{equation}
+	y = \left(\sum_{i=1}^{n} x_{i} \, w_{i} \right) + \theta
+\end{equation}
+If we further assume that $w_{0} = \theta$ and $x_{0} = 1$,
+then we can define 
+\begin{equation}
+	y = \sum_{i} x_{i} \, w_{i}.
+\end{equation}
+\end{itemize}
+
+\subsection{Learning rule}
+The learning rule used by ADALINE is the LMS ("least mean squares") algorithm, a special case of gradient descent.
+
+Define
+\begin{enumerate}
+	\item $\epsilon$ is the learning rate
+	\item $o$ is the desired output or target
+	\item $E = (o - y)^{2}$ is the square of error.
+\end{enumerate}
+
+The LMS algorithm updates the weights by
+\begin{equation}
+	w^{k+1} = w^{k} + \epsilon \, (o - y) \, x,
+\end{equation}
+where $w^{0}$ is a random value. This learning rule minimizes $E$, and is the stochastic gradient descent update for linear regresion.
+
+\section{Frameworks}
+
+PyTorch and TensorFlow are two popular deep learning frameworks that can be used to build and train neural networks. They provide a variety of tools and features that make it easier to develop and deploy neural network models.
+
+Here are some of the benefits of using frameworks like PyTorch and TensorFlow:
+
+\begin{enumerate}
+	\item Ease of use: These frameworks provide high-level APIs that make it easy to define and train neural networks. This can save a lot of time and effort, especially for beginners.
+	\item Flexibility: These frameworks are very flexible and can be used to build a wide variety of neural network architectures. This makes them suitable for a variety of tasks, such as image classification, natural language processing, and speech recognition.
+	\item Performance: These frameworks are designed to be efficient and can be used to train large neural networks on large datasets.
+	\item Community support: There is a large and active community of users and developers for these frameworks. This means that there is plenty of documentation and support available, and it is easy to find help if you need it.
+\end{enumerate}
+Overall, PyTorch and TensorFlow are powerful tools that can be used to build and train neural networks. They are a good choice for beginners and experienced developers alike.
+
+Ultimately, the best framework for you will depend on your specific needs and preferences. If you are a beginner, PyTorch is a good choice because it is easier to learn. If you need a framework that is highly efficient for training large neural networks, TensorFlow is a good choice.
+
+\section{What to do}
+
+Currently, the complexity of defining and training neural newtorks is hidden inside the frameworks.
+
+Consider the following code
+
+\end{document}
+
+- Main body
+- Part 1: Neural networks for weather forecasting
+- Describe how neural networks can be used to replace or enhance certain components of numerical weather prediction models, such as parameterizations, data assimilation and post-processing.
+- Present some recent studies and results that demonstrate the potential and limitations of neural networks for weather forecasting, such as [Weather and climate forecasting with neural networks](^1^) ¹ and [Neural Networks for Postprocessing Ensemble Weather Forecasts](^3^) ³.
+- Discuss the advantages and disadvantages of neural networks compared to traditional methods, such as accuracy, efficiency, interpretability and generalizability.
+- Part 2: Neural networks for climate analyses
+- Explain how neural networks can be used to extract patterns, trends and extremes from large and complex climate datasets, such as observations, reanalyses and simulations.
+- Show some examples and findings of using neural networks for climate analyses, such as [Machine Learning in Weather Prediction and Climate Analyses](^2^) ² and [Deep neural networks speed up weather and climate models](^4^) ⁴.
+- Evaluate the strengths and weaknesses of neural networks for climate analyses, such as robustness, scalability, causality and uncertainty.
+- Conclusion
+- Summarize the main points and key messages of the presentation.
+- Highlight the current state-of-the-art and future directions of using neural networks for weather and climate studies.
+- Provide some recommendations and implications for researchers, practitioners and policymakers in this field.
+
+I hope this outline helps you prepare your presentation. If you need any further assistance, please let me know. 😊
+
+Source: Conversation with Bing, 9/7/2023
+(1) GMD - Weather and climate forecasting with neural networks: using .... https://gmd.copernicus.org/articles/12/2797/2019/.
+(2) GMD - Weather and climate forecasting with neural networks: using .... https://gmd.copernicus.org/articles/12/2797/2019/.
+(3) Neural Networks for Postprocessing Ensemble Weather Forecasts. https://journals.ametsoc.org/view/journals/mwre/146/11/mwr-d-18-0187.1.xml.
+(4) Neural Networks for Postprocessing Ensemble Weather Forecasts. https://journals.ametsoc.org/view/journals/mwre/146/11/mwr-d-18-0187.1.xml.
+(5) Machine Learning in Weather Prediction and Climate Analyses ... - MDPI. https://www.mdpi.com/2073-4433/13/2/180.
+(6) Machine Learning in Weather Prediction and Climate Analyses ... - MDPI. https://www.mdpi.com/2073-4433/13/2/180.
+(7) Deep neural networks speed up weather and climate models. https://www.sciencedaily.com/releases/2019/11/191112164947.htm.
+(8) Deep neural networks speed up weather and climate models. https://www.sciencedaily.com/releases/2019/11/191112164947.htm.
+(9) How To Create an Effective Presentation Outline | Indeed.com. https://www.indeed.com/career-advice/career-development/how-to-create-presentation-outline.
+(10) How to Write an Effective Presentation Outline - Visme. https://visme.co/blog/presentation-outline/.
+(11) How to Outline a Presentation: A Complete Guide From a Pro. https://speakandconquer.com/how-to-outline-a-presentation/.
+(12) Create and print a presentation in Outline view - Microsoft Support. https://support.microsoft.com/en-us/office/create-and-print-a-presentation-in-outline-view-3516310c-c9c0-4d4f-8c11-2759313477a5.
+(13) undefined. https://doi.org/10.5194/gmd-12-2797-2019.
+(14) undefined. https://doi.org/10.3390/atmos13020180.
+(15) undefined. https://www.forbes.com/sites/joemckendrick/2019/10/23/artificial-intelligence-enters-its-golden-age/?sh=75d495f0734e.
+
+	
+\end{document}
+
+
+
+A neural network is a machine learning model inspired by the human brain. It is a system of interconnected nodes that can learn to recognize patterns and make predictions. Neural networks are used in a wide variety of applications, including image recognition, natural language processing, and speech recognition.
+
+
+Neural networks are very powerful tools, but they can be difficult to train. They require a lot of data and computing power. However, the advances in machine learning and computing power have made neural networks a viable option for a wide variety of applications.
+
+Here are some examples of how neural networks are used today:
+
+\begin{itemize}
+	\item Image recognition: Neural networks are used to identify objects in images. For example, they can be used to classify images of cats and dogs.
+	Natural language processing: Neural networks are used to understand and process human language. For example, they can be used to translate languages or to generate text.
+	\item Speech recognition: Neural networks are used to recognize speech. For example, they can be used to control devices with voice commands.
+	\item Medical diagnosis: Neural networks are used to diagnose diseases. For example, they can be used to analyze medical images to detect cancer.
+	\item Financial trading: Neural networks are used to make financial predictions. For example, they can be used to predict stock prices or to identify trading opportunities.
+\end{itemize}
+
+How can neural networks be used for forecasting?
+Why are neural networks being used for weather forecasting?
+Background
+History of weather forecasting
+Current state of weather forecasting
+Challenges in weather forecasting
+Neural networks for weather forecasting
+Different types of neural networks for weather forecasting
+How neural networks are trained for weather forecasting
+Evaluation of neural network weather forecasting models
+Applications of neural networks in weather forecasting
+Local weather forecasting
+Climate change forecasting
+Extreme weather forecasting
+Conclusion
+Summary of the presentation
+Future directions of research in neural networks for weather forecasting
+Here are some additional points that you could include in your presentation:
+The advantages of using neural networks for weather forecasting:
+Neural networks can learn complex nonlinear relationships between weather variables.
+Neural networks can be trained on large amounts of data.
+Neural networks can be used to forecast weather at multiple timescales.
+The challenges of using neural networks for weather forecasting:
+Neural networks can be computationally expensive to train.
+Neural networks can be sensitive to the quality of the training data.
+Neural networks can be difficult to interpret.
+
+
+\section{Bing}
+

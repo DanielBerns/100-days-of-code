@@ -1,0 +1,265 @@
+\documentclass[11pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[spanish]{babel}
+\usetheme{default}
+\begin{document}
+	\author{Daniel Walther Berns}
+	\title{Inteligencia Artificial, con aplicaciones en el comercio y la industria}
+	%\subtitle{}
+	%\logo{}
+	%\institute{}
+	%\date{}
+	%\subject{}
+	%\setbeamercovered{transparent}
+	%\setbeamertemplate{navigation symbols}{}
+	\begin{frame}[plain]
+		\maketitle
+	\end{frame}
+	
+	\begin{frame}
+		\frametitle{¿Qué es la Inteligencia Artificial?}
+		
+		\begin{enumerate}
+			\item Es una parte de las ciencias de la computación,
+			\item que estudia el desarrollo de sistemas informáticos capaces de aprender a resolver problemas para los que no sabemos como programar una solución eficiente.
+		\end{enumerate}
+	\end{frame}
+
+    \begin{frame}
+    	\frametitle{Ejemplos}
+    	
+    	\begin{enumerate}
+    		\item Traducir de un idioma a otro.
+    		\item Encontrar la ruta más corta para visitar determinados lugares.
+    		\item Contestar preguntas sobre textos o bases de datos voluminosas.
+    		\item Monitorear en tiempo real un video en forma continua.
+    		\item Encontrar patrones en las compras de clientes de supermercado.
+    		\item Detectar perfiles de usuarios para generar propaganda dirigida.
+    		\item Buscar la forma de mejorar un proceso de producción.    		
+    		\item Determinar los tiempos adecuados para el mantenimiento de equipo industrial según las mediciones de uso.
+    	\end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+    	\frametitle{¿Estamos usando Inteligencia Artificial ahora?}
+    	
+    	\begin{enumerate}
+    		\item En los teléfonos celulares.
+    		\item Modelos de lenguaje: ChatGPT, Bard, Bing, Claude.
+    		\item Photoshop, Microsoft Office, Google Docs.
+    	\end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+    	\frametitle{¿Cuáles son los problemas de la Inteligencia Artificial?}
+    	
+    	\begin{enumerate}
+            \item En nuestro imaginario colectivo predomina la idea de la Inteligencia Artificial General (AGI): un sistema informático con capacidades sobrehumanas capaz de superarnos en cualquier tarea, y eventualmente dominarnos y someternos.
+            \item En la realidad, tenemos una Inteligencia Artificial débil (weak AI): Los sistemas desarrollados actualmente solo dominan unas pocas tareas en forma simultánea.
+            \item Además, los métodos, procedimientos y algoritmos de la IA son de naturaleza compleja. Por ejemplo, la traducción de lenguajes y el procesamiento de imágenes demoraron décadas en obtener los resultados esperados.
+    	\end{enumerate}
+    \end{frame}
+ 
+    \begin{frame}
+    	\frametitle{Las lecciones de la historia}
+    	
+    	\begin{enumerate}
+    		\item Inicios: Julio de 1956.
+    		\item Inviernos de la IA. Se prometió mucho, y se consiguió poco en los plazos pactados. Por lo tanto, ocurrieron recortes masivos de los presupuestos de investigación.
+    		\item Los avances siempre fueron imprevistos, y en direcciones impensadas. 
+    		\item Diversidad de temas. 
+    		\item Situación similar a otras áreas de avanzada (fusión nuclear).
+    	\end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+    	\frametitle{Los grandes temas de la Inteligencia Artificial}
+    	
+    	\begin{enumerate}
+    		\item Reglas lógicas.
+    		\item Sistemas expertos.
+    		\item Aprendizaje automático (Machine learning):
+    		\begin{enumerate}
+    			\item Aprendizaje supervisado (redes neuronales, árboles de decisión);
+    			\item Aprendizaje no supervisado (clustering, reglas de asociación);
+    			\item Aprendizaje auto supervisado; 
+    			\item Aprendizaje por refuerzo (robótica);
+    		\end{enumerate}
+    	    \item Representación del conocimiento;
+    	    \item Razonamiento automatizado;
+    	    \item Planificación automatizada.
+    	\end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+    	\frametitle{Reglas lógicas}
+    	
+    	\begin{itemize}
+    		\item Los sistemas basados en reglas lógicas funcionan bien en casos muy limitados (juegos).
+    		\item En situaciones más generales, las reglas lógicas son frágiles porque no hay un método para modificarlas en base a información nueva.
+    		\item En la actualidad, existen algunas aplicaciones de reglas lógicas en ciertos sistemas industriales (NASA) y comerciales (manejo de stock)
+    	\end{itemize}
+    \end{frame}
+
+    \begin{frame}
+    	\frametitle{Sistemas expertos}
+    	
+    	\begin{itemize}
+    		\item Estos sistemas están formados por un conjunto de reglas lógicas en un dominio muy limitado preparado por expertos humanos.
+    		\item Muy frágiles, no tienen ejemplos actuales.
+    	\end{itemize}
+    \end{frame}
+
+    \begin{frame}
+    	\frametitle{Aprendizaje automático (Machine Learning)}
+    	
+    	\begin{itemize}
+    	\item A diferencia de los sistemas basados en reglas lógicas, el aprendizaje automático no requiere que los sistemas sean programados explícitamente. 
+    	
+    	\item En cambio, los algoritmos de aprendizaje automático aprenden a realizar una tarea a partir de datos, dandoles una mayor capacidad de adaptación a la realidad.
+    	\end{itemize}
+    \end{frame}
+
+    \begin{frame}
+    	\frametitle{Aprendizaje supervisado}
+    	
+    	\begin{enumerate}
+    		\item En el aprendizaje supervisado, suponemos que existe una función o modelo
+    		\begin{equation}
+    			\mathbf{y} = f(\mathbf{x}, \mathbf{w}),
+    		\end{equation}
+    	    donde $\mathbf{x}$ representa a los datos de entrada, $\mathbf{y}$ representa a los datos de salida, y $\mathbf{w}$ son parámetros que se calculan durante un proceso de entrenamiento
+    	    \begin{equation}
+    	    	\mathbf{w}_{k+1} = g(\mathbf{X}_{e}, \mathbf{Y}_{e}, \mathbf{w}_{k}), \qquad 0 \leq k \leq N,
+    	    \end{equation}
+            $\mathbf{w}_{0}$ es un valor aleatorio, $\mathbf{X}_{e}$ e $\mathbf{Y}_{e}$ son los ejemplos de entrenamiento.
+            
+            \item Este cálculo está implementado en al menos dos librerías: Tensorflow y PyTorch, que podemos usar para construir nuestras propias redes neuronales y árboles de decisión. 
+    	\end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+    	\frametitle{Tensorflow y Pytorch}
+    	
+    	\begin{quote}
+    	Como disponemos de estas librerías, para usar con Python, los programas necesarios para construir redes neuronales y árboles de decisión se simplifican mucho.
+    	\end{quote}
+    
+    	\begin{itemize}
+    		\item https://www.tensorflow.org/tutorials
+    		\item https://pytorch.org/tutorials
+    	\end{itemize}
+    \end{frame}
+
+    \begin{frame}
+    	\frametitle{Como construir un sistema de aprendizaje automático, 1}
+
+        \begin{itemize}
+        	\item Para empezar, definimos que necesitamos. Por ejemplo, 
+        	\begin{enumerate}
+        		\item Tenemos los datos de uso de una máquina y necesitamos saber cuando le corresponde mantenimiento.
+        		\item Tenemos los datos de ventas en un supermercado y necesitamos saber los patrones habituales de consumo.
+        		\item Tenemos los datos del tiempo y necesitamos pronosticar como va a estar el tiempo mañana.
+        		\item Tenemos videos y necesitamos contar los vehículos que aparecen en ellos.
+        	\end{enumerate}
+    	\end{itemize}
+    \end{frame}
+
+    \begin{frame}
+	\frametitle{Como construir un sistema de aprendizaje automático, 2}
+	
+	\begin{itemize}
+		\item Ahora, necesitamos ver si es posible definir un modelo $\mathbf{y} = f(\mathbf{x}, \mathbf{w})$ con los datos que disponemos. 
+		\begin{enumerate}
+			\item Para esto, debemos disponer de una computadora donde usar Python, y al menos una de las librerías Tensorflow o Pytorch.
+			\item Como vimos antes, usando los datos de entrenamiento podemos calcular los parámetros $\mathbf{w}$. Esta es la fase de entrenamiento durante la cual se da el proceso de aprendizaje.
+            \item Podemos ejecutar los tutoriales de Tensorflow y Pytorch en la nube,
+            porque son suficientemente simples para terminar rápido.
+            \item Sin embargo, para un modelo complejo, con muchos datos de entrenamiento y gran cantidad de parámetros necesitaremos una computadora de cierta potencia: en este momento, basta decir que necesitamos una PC gamer de buena calidad para calcular los parámetros $\mathbf{w}$.
+		\end{enumerate}
+	\end{itemize}
+    \end{frame}
+
+    \begin{frame}
+	\frametitle{Como construir un sistema de aprendizaje automático, 3}
+	
+	\begin{itemize}
+		\item Habiendo calculado los parámetros $\mathbf{w}$ con los datos de entrenamiento, pasamos a la fase de uso o inferencia. 
+		\begin{enumerate}
+			\item En esta fase de uso podemos usar otra computadora con menor potencia y memoria.
+			\item En este punto, tenemos un modelo $\mathbf{y} = f(\mathbf{x}, \mathbf{w})$, que puede ser una red neuronal o un árbol de decisión.
+			Lo que necesitamos ahora es una forma de conseguir $\mathbf{x}$ para poder calcular $\mathbf{y}$. En otras palabras, necesitamos una interfase de usuario: un programa o aplicación de apariencia agradable y fácil de usar que obtenga los datos del usuario, los introduzca al modelo, obtenga el resultado y lo vuelva a presentar al usuario.
+		\end{enumerate}
+	\end{itemize}
+    \end{frame} 
+    \begin{frame}
+	\frametitle{Como construir un sistema de aprendizaje automático}
+	\begin{enumerate}
+		\item Datos
+		\item Software: Modelo + Interfase de usuario
+		\item Hardware: PC Gamer para entrenamiento, otro dispositivo para inferencia.
+	\end{enumerate}
+    \end{frame}
+    \begin{frame}
+	\frametitle{Ejemplos de sistema de aprendizaje automático}
+	\begin{enumerate}
+		\item El sistema de anuncios de Google, basado en los dispositivos Android para adquirir datos sobre los usuarios y determinar los perfiles de consumo.
+		\item Los traductores de idiomas.
+		\item Reconocimiento facial.
+		\item Reconocimiento de imágenes.
+		\item Conteo de objetos, vehículos, personas.
+	\end{enumerate}
+    \end{frame}
+    \begin{frame}
+	\frametitle{¿Para que usamos un sistema de aprendizaje automático?}
+	\begin{enumerate}
+		\item Automatizar tareas repetitivas como observar video para detectar eventos, monitorear variables en tiempo real (precios, producción de máquinas de funcionamiento continuo), etc.
+		\item ¿ChatGPT? ¿Bard? ¿Bing? ¿Claude? ¿Dalle? ¿Para que sirven? Son sistemas con redes neuronales capaces de generar texto e imágenes en función de estímulos adecuados (en general texto, pero existen versiones multimodales que aceptan también imágenes, videos y audio)
+	\end{enumerate}
+    \end{frame}
+    \begin{frame}
+	\frametitle{¿Para que usamos ChatGPT (LLM o modelos grandes de lenguaje)?}
+	\begin{enumerate}
+		\item La respuesta simple es que los LLM generan texto. Sin embargo, por su entrenamiento y estructura son capaces de razonar, si bien es posible que encontremos fallos o alucinaciones.
+		\item Existen aplicaciones basadas en LLM que son capaces de generar razonamientos y planes verificados, sin fallas aparentes.
+		\item En las versiones pagas de ChatGPT y Claude, es posible dar como estimulo un archivo conteniendo un libro, o una hoja de cálculo y obtener respuestas sobre su contenido.
+	\end{enumerate}
+    \end{frame}
+    \begin{frame}
+	\frametitle{Una forma sencilla de usar ChatGPT, Bard o Bing}
+	\begin{enumerate}
+		\item Hacer brainstorming, escribiendo las ideas en un archivo de texto.
+		\item Pedir al LLM que corrija, ordene, comente y amplie las ideas presentes en el resultado del brainstorming.
+		\item El resultado es un borrador de un documento mas o menos aceptable.
+	\end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+	\frametitle{Otros sistemas posibles}
+    	\begin{enumerate}
+    		\item Reglas de asociación (Association rule learning)
+    		\item Secuencias de patrones (Sequential pattern mining)
+    	\end{enumerate}
+    \end{frame}
+
+    \begin{frame}
+	\frametitle{Blockchain}
+	\begin{enumerate}
+		\item Blockchain es uno de los componentes que forman los sistemas de criptomonedas. 
+		\item Básicamente es una lista cuyos bloques o nodos están unidos por enlaces formando una cadena. Además cada bloque contiene información encriptada con un sistema criptográfico de doble clave (una pública y una privada).
+		\item Existen protocolos de seguridad que nos garantizan, mediante el uso del sistema criptográfico de doble clave, que si se altera el contenido de un blockchain este hecho será evidente para todos los que tengan acceso. En otras palabras, no hay forma de alterar el contenido de un blockchain y que este hecho pase inadvertido.
+		\item Por lo tanto, el blockchain se usa como libro de contabilidad para transacciones en criptomonedas.
+	\end{enumerate}
+    \end{frame}
+    \begin{frame}
+    	\frametitle{Blockchain y IA}
+    	\begin{itemize}
+    		\item Un sistema de IA puede incorporar un blockchain para guardar una constancia digital de los resultados que obtiene.
+    		\item Por ejemplo, un sistema de conteo de personas en un edificio público puede guardar sus resultados junto con la hora y fecha para garantizar que no se excede la capacidad.
+    	\end{itemize}
+    \end{frame}
+
+
+\end{document}

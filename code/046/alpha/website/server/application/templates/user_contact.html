@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="w3-row-padding">
+<div class="w3-cell w3-quarter"><br></div>    
+<div class="w3-cell w3-half w3-white">
+<div class="w3-container">
+<table class="table">
+    <tr>
+        <td style="border: 0px;">
+            <p><a href="{{ url_for('main.followed_posts', username=user.username) }}">{{ user.username }}</a></p>
+    {% if user.about_me %}<p>{{ user.about_me }}</p>{% endif %}
+    {% if user.last_seen %}
+        <p>Ultima visita: {{ user.last_seen }}</p>
+    {% endif %}
+    <hr>
+    <p>{{user.followers.count()}} seguidores, siguiendo a {{user.followed.count()}} usuarios</p> 
+    <hr>
+    {% if user != current_user %}
+            <p>
+              <a href="{{ url_for('main.send_message', recipient=user.username) }}">Enviar mensaje privado</a>
+            </p>
+            <hr>
+                {% if not current_user.is_following(user) %}
+                <p>
+                    <form action="{{ url_for('main.follow', username=user.username) }}" method="post">
+                        {{ form.hidden_tag() }}
+                        {{ form.submit(value='Seguir publicaciones') }}
+                    </form>
+                </p>
+                {% else %}
+                <p>
+                    <form action="{{ url_for('main.unfollow', username=user.username) }}" method="post">
+                        {{ form.hidden_tag() }}
+                        {{ form.submit(value='No seguir publicaciones') }}
+                    </form>
+                </p>
+                {% endif %}
+    {% endif %}
+    </td>
+    </tr>
+</table>
+</div>
+</div>
+<div class="w3-cell-row w3-quarter"><br></div>
+</div>
+{% endblock %}

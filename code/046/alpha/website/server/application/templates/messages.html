@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block navigation %}
+<nav class="w3-container">
+  <h1 class="w3-center w3-teal">{{ nav_h1 }}</h1>
+  <div class="w3-bar w3-text-teal">
+  {% if current_user.is_anonymous %}
+      <a class="w3-bar-item w3-left" href="{{ url_for('main.help') }}">Ayuda</a>
+      <a class="w3-bar-item w3-left" href="{{ url_for('auth.login') }}">Ingresar</a>
+  {% else %}
+      <a class="w3-bar-item w3-left" href="{{ url_for('main.help') }}">Ayuda</a>              
+      <a class="w3-bar-item w3-left" href="{{ url_for('main.index') }}">Indice</a>
+      <a class="w3-bar-item w3-left" href="{{ url_for('main.all_the_posts') }}">Todas las publicaciones</a>              
+      <a class="w3-bar-item w3-left" href="{{ url_for('main.followed_posts', username=current_user.username) }}">Las publicaciones que sigo</a>
+      <a class="w3-bar-item w3-right" href="{{ url_for('auth.logout') }}">Salir</a>
+  {% endif %}
+  </div>
+</nav>
+{% endblock %}
+
+{% block content %}
+<div class="w3-container">
+    <h1 class="w3-center">Mensajes</h1>
+    {% include '_list_messages.html' %}
+</div>
+{% endblock %}

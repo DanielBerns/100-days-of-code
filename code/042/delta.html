@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css">
+</head>
+<body>
+
+<!-- theSidebar -->
+<nav class="w3-sidebar w3-bar-block w3-card w3-animate-left w3-center" style="display:none" id="theSidebar">
+  <h1>Side Navigation</h1>
+  <button class="w3-bar-item w3-button" onclick="closeTheSidebar()">Close <i class="fa fa-remove"></i></button>
+  <a href="#" class="w3-bar-item w3-button">Link 1</a>
+  <a href="#" class="w3-bar-item w3-button">Link 2</a>
+  <a href="#" class="w3-bar-item w3-button">Link 3</a>
+  <a href="#" class="w3-bar-item w3-button">Link 4</a>
+</nav>
+
+<!-- theHeader -->
+<header class="w3-container w3-theme w3-padding" id="theHeader">
+  <i onclick="openTheSidebar()" class="fa fa-bars w3-xlarge w3-button w3-theme"></i> 
+  <div class="w3-center">
+  <h4>BEAUTIFUL RESPONSIVE WEB SITE</h4>
+  <h1 class="w3-xxxlarge w3-animate-bottom">BUILT WITH W3.CSS</h1>
+    <div class="w3-padding-32">
+      <button class="w3-btn w3-xlarge w3-dark-grey w3-hover-light-grey" onclick="document.getElementById('modal01').style.display='block'" style="font-weight:900;">LEARN W3.CSS</button>
+    </div>
+  </div>
+</header>
+
+<!-- Modal -->
+<div id="modal01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-top">
+      <header class="w3-container w3-theme-l1"> 
+        <div onclick="document.getElementById('modal01').style.display='none'"
+        class="w3-button w3-display-topright">Cerrar</div>
+        <h4>Oh snap! We just showed you a modal..</h4>
+        <h5>Because we can <i class="fa fa-smile-o"></i></h5>
+      </header>
+      <div class="w3-padding">
+          <input class="w3-input" oninput="w3.filterHTML('#search', 'article', this.value)" placeholder="Search for names..">
+      </div>
+      <footer class="w3-container w3-theme-l1">
+        <p>Modal footer</p>
+      </footer>
+    </div>
+</div>
+
+<div class="w3-card w3-container" style="min-height:460px">
+<br>
+<input class="w3-input" oninput="w3.filterHTML('#search', 'article', this.value)" placeholder="Search for names..">
+<br>
+<div class="w3-container" id="search">
+    <article class="w3-row">
+        <div class="w3-third w3-pale-blue">un texto muy muy largo</div>
+        <div class="w3-third w3-pale-green">pero no corto</div>
+        <div class="w3-third w3-light-gray">paciente</div>
+    </article>
+    <article class="w3-row">
+        <div class="w3-third w3-pale-blue">nada nada nada</div>
+        <div class="w3-third w3-pale-green">perepe</div>
+        <div class="w3-third w3-light-gray">naruto</div>
+    </article>
+    <article class="w3-row">
+        <div class="w3-third w3-pale-blue">yanquilandia</div>
+        <div class="w3-third w3-pale-green">tailandia</div>
+        <div class="w3-third w3-light-gray">singapur</div>
+    </article>
+    <article class="w3-row">
+        <div class="w3-third w3-pale-blue">un texto muy muy largo</div>
+        <div class="w3-third w3-pale-green">pero no corto</div>
+        <div class="w3-third w3-light-gray">paciente</div>
+    </article>
+    <article class="w3-row">
+        <div class="w3-third w3-pale-blue">nada nada nada</div>
+        <div class="w3-third w3-pale-green">perepe</div>
+        <div class="w3-third w3-light-gray">naruto</div>
+    </article>
+    <article class="w3-row">
+        <div class="w3-third w3-pale-blue">yanquilandia</div>
+        <div class="w3-third w3-pale-green">tailandia</div>
+        <div class="w3-third w3-light-gray">singapur</div>
+    </article>
+    <article class="w3-row">
+        <div class="w3-third w3-pale-blue">un texto muy muy largo</div>
+        <div class="w3-third w3-pale-green">pero no corto</div>
+        <div class="w3-third w3-light-gray">paciente</div>
+    </article>
+    <article class="w3-row">
+        <div class="w3-third w3-pale-blue">nada nada nada</div>
+        <div class="w3-third w3-pale-green">perepe</div>
+        <div class="w3-third w3-light-gray">naruto</div>
+    </article>
+    <article class="w3-row">
+        <div class="w3-third w3-pale-blue">yanquilandia</div>
+        <div class="w3-third w3-pale-green">tailandia</div>
+        <div class="w3-third w3-light-gray">singapur</div>
+    </article>
+    <article class="w3-row">
+        <div class="w3-third w3-pale-blue">un texto muy muy largo</div>
+        <div class="w3-third w3-pale-green">pero no corto</div>
+        <div class="w3-third w3-light-gray">paciente</div>
+    </article>
+    <article class="w3-row">
+        <div class="w3-third w3-pale-blue">nada nada nada</div>
+        <div class="w3-third w3-pale-green">perepe</div>
+        <div class="w3-third w3-light-gray">naruto</div>
+    </article>
+    <article class="w3-row">
+        <div class="w3-third w3-pale-blue">yanquilandia</div>
+        <div class="w3-third w3-pale-green">tailandia</div>
+        <div class="w3-third w3-light-gray">singapur</div>
+    </article>    
+</div>
+</div>
+
+<footer class="w3-container w3-theme">
+  <h5>Footer</h5>
+  <p class="w3-opacity">Footer information goes here</p>
+</footer>
+
+<script>
+// Side navigation
+function openTheSidebar() {
+  var x = document.getElementById("theSidebar");
+  x.style.width = "100%";
+  // x.style.fontSize = "20px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+function closeTheSidebar() {
+  document.getElementById("theSidebar").style.display = "none";
+}
+</script>
+
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+</body>
+</html> 
