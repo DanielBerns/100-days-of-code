@@ -1,8 +1,11 @@
 # https://www.freecodecamp.org/news/the-python-decorator-handbook/
 
+
 def log_decorator(original_function):
     def wrapper(*args, **kwargs):
-        print(f"Calling {original_function.__name__} with args: {args}, kwargs: {kwargs}")
+        print(
+            f"Calling {original_function.__name__} with args: {args}, kwargs: {kwargs}"
+        )
 
         # Call the original function
         result = original_function(*args, **kwargs)
@@ -12,10 +15,12 @@ def log_decorator(original_function):
 
         # Return the result
         return result
+
     return wrapper
 
 
 import time
+
 
 def measure_execution_time(func):
     def timed_execution(*args, **kwargs):
@@ -23,8 +28,11 @@ def measure_execution_time(func):
         result = func(*args, **kwargs)
         end_timestamp = time.time()
         execution_duration = end_timestamp - start_timestamp
-        print(f"Function {func.__name__} took {execution_duration:.2f} seconds to execute")
+        print(
+            f"Function {func.__name__} took {execution_duration:.2f} seconds to execute"
+        )
         return result
+
     return timed_execution
 
 
@@ -52,13 +60,15 @@ def check_condition_positive(value):
                 return func(*args, **kwargs)
             else:
                 raise ValueError("Invalid arguments passed to the function")
+
         return validate_and_calculate
+
     return argument_validator
+
 
 # @check_condition_positive(lambda x: x > 0)
 # def compute_cubed_result(number):
 #     return number ** 3
-
 
 
 def handle_exceptions(default_response_msg):
@@ -71,13 +81,17 @@ def handle_exceptions(default_response_msg):
                 # Handle the exception and provide the default response
                 print(f"Exception occurred: {error}")
                 return default_response_msg
+
         return decorated_function
+
     return exception_handler_decorator
+
 
 # Example usage
 @handle_exceptions(default_response_msg="An error occurred!")
 def divide_numbers_safely(dividend, divisor):
     return dividend / divisor
+
 
 # Call the decorated function
 result = divide_numbers_safely(7, 0)  # This will raise a ZeroDivisionError

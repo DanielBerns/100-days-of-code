@@ -1,29 +1,35 @@
 from typing import Generator, Dict, List, Tuple, Callable, DefaultDict, Any
+from pathlib import Path
 from collections import defaultdict
 from .base import Base
-from .doc import Doc 
+from .doc import Doc
 from .parser import parse, next_line, log_decorator
 from PyPDF2 import PdfReader
 
 # References
 # https://nanonets.com/blog/extract-text-from-pdf-file-using-python/
 
+
 class Pipeline(Base):
     def __init__(self, content: Doc, constants: Doc, variables: Doc) -> None:
         super().__init__()
         self._content: Doc = content
         self._constants: Doc = constants
-        self._variables: Doc = variables        
+        self._variables: Doc = variables
 
     def bind(self, action: Callable[[Doc, Doc, Doc], bool]) -> "Pipeline":
-        ok = action(self._content, self._constants, self._variables) if self.ok else False
+        ok = (
+            action(self._content, self._constants, self._variables)
+            if self.ok
+            else False
+        )
         if not ok:
             self.error = "Pipeline.bind - 1: not ok"
         return self
 
 
 def create(resource: str) -> Pipeline:
-    content = Doc()        
+    content = Doc()
     constants = Doc()
     variables = Doc()
     pipeline = Pipeline(content, constants, variables)
@@ -38,11 +44,13 @@ def create(resource: str) -> Pipeline:
         pipeline.error = f"create - 1: {str(error):s}"
     return pipeline
 
+
 def show(content: Doc, constants: Doc, variables: Doc) -> bool:
     content.show()
     constants.show()
     variables.show()
-    return content.ok and constants.ok and variables.ok 
+    return content.ok and constants.ok and variables.ok
+
 
 # How to type hint the variable db?
 
@@ -53,11 +61,12 @@ def create_db() -> DB:
     db: DB = defaultdict(lambda: defaultdict(lambda: defaultdict(list)))
     return db
 
-def tf(value: str) -> int:
-    return int(value.replace('.', '').replace(',', ''))
 
-def update(db: DB, constants: Doc, variables: Doc) -> None:
-    record: Dict[str, str] = {}
+def tf(value: str) -> int:
+    return int(value.replace(".", "").replace(",", ""))
+
+
+def update(amounts: DB, positions: DB, constants: Doc, variables: Doc) -> None:
     periodo = constants.get("periodo", "error")
     apellido_y_nombres = constants.get("apellido_y_nombres", "error")
     documento = constants.get("documento", "error")
@@ -65,29 +74,37 @@ def update(db: DB, constants: Doc, variables: Doc) -> None:
     haberes = variables.get("haberes", "0.00")
     descuentos = variables.get("descuentos", "0.00")
     salario_familiar = variables.get("salario_familiar", "0.00")
-    neto = variables.get("neto", "0.00")        
+    neto = variables.get("neto", "0.00")
     for codigo, valor in variables.items():
-        db[periodo][codigo][documento].append(tf(valor))
-    db[periodo]["haberes"][documento].append(tf(haberes))
-    db[periodo]["descuentos"][documento].append(tf(descuentos))
-    db[periodo]["salario_familiar"][documento].append(tf(salario_familiar))
-    db[periodo]["neto"][documento].append(tf(neto))    
-        
+        amounts[documento][periodo][codigo].append(tf(valor))
+    amounts[documento][periodo]["haberes"].append(tf(haberes))
+    amounts[documento][periodo]["descuentos"].append(tf(descuentos))
+    amounts[documento][periodo]["salario_familiar"].append(tf(salario_familiar))
+    amounts[documento][periodo]["neto"].append(tf(neto))
+    positions[documento][periodo][categoria].append(tf(neto))
 
-def execute(resources: List[str]) -> None:
-    db: DB = create_db()
-    for this_resource in resources:
-        print(this_resource)
-        pipeline = (create(this_resource)
-                    .bind(parse)
-                    .bind(show)
-                   )
-        update(db, pipeline._constants, pipeline._variables)
-    print('-'*80)
-    for periodo, valores in db.items():
-        print(periodo)
-        for rubro, personas in valores.items():
-            print('  ', rubro)
-            for documento, montos in personas.items():
-                print('    ', documento, sum(montos) / 100)
-        
+
+def write(resource: Path, db: DB) -> None:
+    with open(resource, "w") as target:
+        target.write("# Reporte por documento y período\n\n")
+        for documento, persona in db.items():
+            target.write(f"## {documento:s}\n")
+            for periodo, rubros in persona.items():
+                target.write("\n\n")
+                target.write(f"### {periodo:s}\n\n")
+                target.write(f"| Rubro     | Monto |\n")
+                target.write(f"| :--------------------------------------------------- | ----------: |\n")
+                for codigo, values in rubros.items():
+                    sum_values = sum(values)
+                    target.write(f"| {codigo:<50s} | {sum_values / 100:>10.2f} |\n")
+
+
+def collect(origins: List[str], results: str) -> None:
+    amounts: DB = create_db()
+    positions: DB = create_db()
+    for a_resource in origins:
+        print(a_resource)
+        pipeline = create(a_resource).bind(parse).bind(show)
+        update(amounts, positions, pipeline._constants, pipeline._variables)
+    write(Path(results, "amounts.md"), amounts)
+    write(Path(results, "positions.md"), positions)
