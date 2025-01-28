@@ -76,28 +76,36 @@ def update(amounts: DB, positions: DB, constants: Doc, variables: Doc) -> None:
     salario_familiar = variables.get("salario_familiar", "0.00")
     neto = variables.get("neto", "0.00")
     for codigo, valor in variables.items():
-        amounts[documento][periodo][codigo].append(tf(valor))
-    amounts[documento][periodo]["haberes"].append(tf(haberes))
-    amounts[documento][periodo]["descuentos"].append(tf(descuentos))
-    amounts[documento][periodo]["salario_familiar"].append(tf(salario_familiar))
-    amounts[documento][periodo]["neto"].append(tf(neto))
-    positions[documento][periodo][categoria].append(tf(neto))
+        amounts[periodo][documento][codigo].append(tf(valor))
+    amounts[periodo][documento]["haberes"].append(tf(haberes))
+    amounts[periodo][documento]["descuentos"].append(tf(descuentos))
+    amounts[periodo][documento]["salario_familiar"].append(tf(salario_familiar))
+    amounts[periodo][documento]["neto"].append(tf(neto))
+    positions[periodo][documento][categoria].append(tf(neto))
 
 
 def write(resource: Path, db: DB) -> None:
     with open(resource, "w") as target:
-        target.write("# Reporte por documento y período\n\n")
-        for documento, persona in db.items():
-            target.write(f"## {documento:s}\n")
-            for periodo, rubros in persona.items():
-                target.write("\n\n")
-                target.write(f"### {periodo:s}\n\n")
-                target.write(f"| Rubro     | Monto |\n")
-                target.write(f"| :--------------------------------------------------- | ----------: |\n")
-                for codigo, values in rubros.items():
-                    sum_values = sum(values)
-                    target.write(f"| {codigo:<50s} | {sum_values / 100:>10.2f} |\n")
-
+        periodos = sorted([pp for pp in db.keys()])        
+        for pp in periodos:
+            target.write(f"# Reporte período {pp:s}\n\n")
+            target.write("## Reporte por documento y rubro\n\n")            
+            totales = {}
+            salarios = db[pp]
+            target.write(f"| Documento       | Rubro     | Monto |\n")
+            target.write(f"| :-------------- | :--------------------------------------------------- | ----------: |\n")
+            for documento, persona in salarios.items():
+                for codigo, valores in persona.items():
+                    suma_valores = sum(valores)
+                    totales[codigo] = totales.get(codigo, 0) + suma_valores
+                    target.write(f"| {documento:<12s}| {codigo:<50s} | {suma_valores / 100:>10.2f} |\n")
+            target.write("\n\n")
+            target.write("## Reporte por rubro\n\n")                        
+            target.write(f"| Rubro     | Monto |\n")
+            target.write(f"| :--------------------------------------------------- | ----------: |\n")                    
+            for codigo, valores in totales.items():
+                target.write(f"| {codigo:<50s} | {valores / 100:>10.2f} |\n")
+                
 
 def collect(origins: List[str], results: str) -> None:
     amounts: DB = create_db()
